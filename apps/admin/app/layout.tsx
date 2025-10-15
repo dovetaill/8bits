@@ -1,6 +1,8 @@
 import '@dove/tokens/themes/brutalism-theme.css'
 import './globals.css'
 import type { Metadata } from 'next'
+import { ThemeToggle } from './components/ThemeToggle'
+
 export const metadata: Metadata = { title: 'Dove Admin', description: 'Neo‑Brutalism · Prisma + 多源对接 + S3/R2 上传' }
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
@@ -12,8 +14,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <div><div className="text-[20px] font-semibold leading-tight">Blog 管理后台</div><div className="text-[#666] text-[13px]">Next.js + Prisma + Provider + 上传</div></div>
             <div className="ml-auto flex items-center gap-2">
               <a href="/login" className="border-3 border-ink rounded-brut bg-surface px-3 py-1 text-sm font-semibold shadow-brut">退出</a>
-              <button className="border-3 border-ink rounded-brut shadow-brut bg-[var(--accent-3)] text-white px-3 py-1 text-sm font-semibold" onClick={()=>document.documentElement.setAttribute('data-theme','lego')}>LEGO</button>
-              <button className="border-3 border-ink rounded-brut shadow-brut bg-surface px-3 py-1 text-sm font-semibold" onClick={()=>{ const el=document.documentElement; el.setAttribute('data-radius', el.getAttribute('data-radius')==='soft'?'sharp':'soft') }}>切圆角</button>
+              <ThemeToggle />
             </div>
           </div>
           <nav className="mt-3 flex gap-3">
