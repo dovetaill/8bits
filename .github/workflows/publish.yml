@@ -1,0 +1,40 @@
+name: Publish & Deploy Docs
+on:
+  release:
+    types: [published]
+
+jobs:
+  publish-npm:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+          registry-url: 'https://registry.npmjs.org'
+      - run: npm ci
+      - run: npm run build:ui
+      - run: npm run build -ws
+      - name: Publish @dove/tokens
+        run: npm publish -w @dove/tokens --access public || true
+        env: { NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }} }
+      - name: Publish @dove/ui
+        run: npm publish -w @dove/ui --access public || true
+        env: { NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }} }
+
+  docs:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20, cache: 'npm' }
+      - run: npm ci
+      - run: npm run build -w @dove/docs
+      - uses: actions/upload-pages-artifact@v3
+        with: { path: 'apps/docs/build' }
+      - uses: actions/deploy-pages@v4

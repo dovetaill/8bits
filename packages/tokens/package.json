@@ -1,0 +1,22 @@
+{
+  "name": "@dove/tokens",
+  "version": "0.3.0",
+  "private": false,
+  "main": "index.cjs",
+  "types": "index.d.ts",
+  "exports": {
+    ".": "./index.cjs",
+    "./plugin": "./plugins/brutalism.tailwind.js",
+    "./themes/brutalism-theme.css": "./themes/brutalism-theme.css"
+  },
+  "files": [
+    "plugins",
+    "themes",
+    "index.cjs",
+    "index.d.ts"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "tailwindcss": ">=3.4.0"
+  }
+}

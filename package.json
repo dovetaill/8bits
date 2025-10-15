@@ -1,0 +1,24 @@
+{
+  "name": "dove-monorepo",
+  "private": true,
+  "version": "0.3.0",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run build -ws",
+    "build:ui": "npm run build -w @dove/ui",
+    "dev:front": "npm run dev -w @dove/frontend",
+    "dev:admin": "npm run dev -w @dove/admin",
+    "dev:play": "npm run dev -w @dove/playground",
+    "dev:docs": "npm run docs:dev -w @dove/docs",
+    "lint": "eslint . --ext .js,.ts,.tsx --max-warnings 0"
+  },
+  "devDependencies": {
+    "eslint": "^9.10.0",
+    "eslint-config-next": "^14.2.5",
+    "prettier": "^3.3.3",
+    "typescript": "^5.4.0"
+  }
+}

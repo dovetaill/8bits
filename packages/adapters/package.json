@@ -1,0 +1,22 @@
+{
+  "name": "@dove/adapters",
+  "version": "0.3.0",
+  "private": false,
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@notionhq/client": "^2.2.14",
+    "@sanity/client": "^6.21.3",
+    "@supabase/supabase-js": "^2.46.1",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  }
+}

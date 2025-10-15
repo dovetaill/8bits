@@ -1,0 +1,29 @@
+{
+  "name": "@dove/db",
+  "private": false,
+  "version": "0.3.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "prisma",
+    "scripts"
+  ],
+  "scripts": {
+    "db:select": "node ./scripts/select-db.mjs",
+    "db:select:postgres": "node ./scripts/select-db.mjs postgres",
+    "db:select:mysql": "node ./scripts/select-db.mjs mysql",
+    "db:select:sqlite": "node ./scripts/select-db.mjs sqlite",
+    "prisma:generate": "npm run db:select && prisma generate",
+    "prisma:migrate": "npm run db:select && prisma migrate dev",
+    "prisma:studio": "prisma studio",
+    "build": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.19.1"
+  },
+  "devDependencies": {
+    "prisma": "^5.19.1",
+    "typescript": "^5.4.0"
+  }
+}

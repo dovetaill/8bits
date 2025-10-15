@@ -1,0 +1,8 @@
+{
+  "packages/tokens": "0.3.0",
+  "packages/ui": "0.3.0",
+  "apps/frontend": "0.3.0",
+  "apps/admin": "0.3.0",
+  "apps/playground": "0.3.0",
+  "apps/docs": "0.1.0"
+}

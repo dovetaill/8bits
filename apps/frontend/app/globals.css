@@ -1,0 +1,5 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.prose p{margin:.5rem 0;line-height:1.9}
+.prose pre{background:var(--panel);border:3px solid var(--ink);border-radius:var(--radius);padding:.75rem;overflow:auto}

@@ -1,0 +1,10 @@
+node_modules
+dist
+.next
+.contentlayer
+storybook-static
+.vite
+.turbo
+*.log
+.DS_Store
+.env*

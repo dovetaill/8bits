@@ -1,0 +1,1 @@
+export default function Page(){return (<main className='max-w-[860px] mx-auto p-6'><div className='bg-surface border-3 border-ink rounded-[var(--radius)] shadow-brut p-6'><h2 className='text-[20px] font-semibold mb-2'>关于本站</h2><p>本博客采用 Contentlayer + MDX 作为内容方案，可在 MDX 中直接使用组件。</p></div></main>)}
