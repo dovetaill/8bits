@@ -1,0 +1,23 @@
+{
+  "id": "upload",
+  "title": "对象存储（S3 / Cloudflare R2）",
+  "description": "- 后台 /api/upload 返回预签名 URL；前端 PUT 上传。",
+  "source": "@site/docs/upload.md",
+  "sourceDirName": ".",
+  "slug": "/upload",
+  "permalink": "/docs/docs/upload",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "外部 Providers（@dove/adapters）",
+    "permalink": "/docs/docs/providers"
+  },
+  "next": {
+    "title": "CI/CD（Release-please）",
+    "permalink": "/docs/docs/ci"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "id": "content",
+  "title": "Contentlayer + MDX",
+  "description": "- 内容位于 apps/frontend/content：",
+  "source": "@site/docs/content.md",
+  "sourceDirName": ".",
+  "slug": "/content",
+  "permalink": "/docs/docs/content",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "主题与 Tokens（@dove/tokens）",
+    "permalink": "/docs/docs/tokens"
+  },
+  "next": {
+    "title": "数据持久化（Prisma + 多数据库）",
+    "permalink": "/docs/docs/persistence"
+  }
+}

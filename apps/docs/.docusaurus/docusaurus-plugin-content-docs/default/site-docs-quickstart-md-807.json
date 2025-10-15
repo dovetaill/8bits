@@ -1,0 +1,19 @@
+{
+  "id": "quickstart",
+  "title": "快速开始",
+  "description": "- 主题：data-theme=\"famicom|pokemon|lego|dmg\"",
+  "source": "@site/docs/quickstart.md",
+  "sourceDirName": ".",
+  "slug": "/quickstart",
+  "permalink": "/docs/docs/quickstart",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "next": {
+    "title": "主题与 Tokens（@dove/tokens）",
+    "permalink": "/docs/docs/tokens"
+  }
+}

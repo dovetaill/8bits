@@ -1,0 +1,23 @@
+{
+  "id": "persistence",
+  "title": "数据持久化（Prisma + 多数据库）",
+  "description": "- 在 @dove/db 选择数据库：",
+  "source": "@site/docs/persistence.md",
+  "sourceDirName": ".",
+  "slug": "/persistence",
+  "permalink": "/docs/docs/persistence",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "Contentlayer + MDX",
+    "permalink": "/docs/docs/content"
+  },
+  "next": {
+    "title": "外部 Providers（@dove/adapters）",
+    "permalink": "/docs/docs/providers"
+  }
+}

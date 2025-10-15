@@ -1,0 +1,23 @@
+{
+  "id": "tokens",
+  "title": "主题与 Tokens（@dove/tokens）",
+  "description": "- 粗黑边：border-3 border-ink",
+  "source": "@site/docs/tokens.md",
+  "sourceDirName": ".",
+  "slug": "/tokens",
+  "permalink": "/docs/docs/tokens",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "快速开始",
+    "permalink": "/docs/docs/quickstart"
+  },
+  "next": {
+    "title": "Contentlayer + MDX",
+    "permalink": "/docs/docs/content"
+  }
+}

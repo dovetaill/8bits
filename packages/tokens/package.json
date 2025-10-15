@@ -7,7 +7,11 @@
   "exports": {
     ".": "./index.cjs",
     "./plugin": "./plugins/brutalism.tailwind.js",
+    "./plugins/brutalism.tailwind.js": "./plugins/brutalism.tailwind.js",
     "./themes/brutalism-theme.css": "./themes/brutalism-theme.css"
+  },
+  "scripts": {
+    "build": "echo 'No build step needed for tokens package'"
   },
   "files": [
     "plugins",

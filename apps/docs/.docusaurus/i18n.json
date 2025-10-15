@@ -1,0 +1,20 @@
+{
+  "defaultLocale": "zh-CN",
+  "locales": [
+    "zh-CN"
+  ],
+  "path": "i18n",
+  "currentLocale": "zh-CN",
+  "localeConfigs": {
+    "zh-CN": {
+      "label": "中文（中国）",
+      "direction": "ltr",
+      "htmlLang": "zh-CN",
+      "calendar": "gregory",
+      "path": "zh-CN",
+      "translate": false,
+      "url": "https://your-org.github.io",
+      "baseUrl": "/docs/"
+    }
+  }
+}

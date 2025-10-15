@@ -1,0 +1,13 @@
+packages:
+  - packages/*
+  - apps/*
+
+ignoredBuiltDependencies:
+  - '@prisma/client'
+  - '@prisma/engines'
+  - contentlayer
+  - core-js
+  - core-js-pure
+  - esbuild
+  - prisma
+  - protobufjs

@@ -1,5 +1,6 @@
 :root { --ifm-color-primary: #000; }
 html[data-theme="dark"] { --ifm-color-primary: #fff; }
-@import url('/node_modules/@dove/tokens/themes/brutalism-theme.css');
+/* @import '@dove/tokens/themes/brutalism-theme.css'; */
+/* Temporarily disabled - import not working in Docusaurus */
 /* 边框与阴影示例 */
 .brut-card { border:3px solid #000; box-shadow:6px 6px 0 0 #000; border-radius:2px; padding:16px; background:var(--panel); }

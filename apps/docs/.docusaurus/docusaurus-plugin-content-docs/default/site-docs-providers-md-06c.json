@@ -1,0 +1,23 @@
+{
+  "id": "providers",
+  "title": "外部 Providers（@dove/adapters）",
+  "description": "设置根 .env：",
+  "source": "@site/docs/providers.md",
+  "sourceDirName": ".",
+  "slug": "/providers",
+  "permalink": "/docs/docs/providers",
+  "draft": false,
+  "unlisted": false,
+  "tags": [],
+  "version": "current",
+  "frontMatter": {},
+  "sidebar": "tutorialSidebar",
+  "previous": {
+    "title": "数据持久化（Prisma + 多数据库）",
+    "permalink": "/docs/docs/persistence"
+  },
+  "next": {
+    "title": "对象存储（S3 / Cloudflare R2）",
+    "permalink": "/docs/docs/upload"
+  }
+}
