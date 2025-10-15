@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunk_dove_docs=self.webpackChunk_dove_docs||[]).push([[647],{4609:(e,s,r)=>{r.r(s),r.d(s,{default:()=>t});r(1855);var c=r(851),d=r(1499),u=r(7808),a=r(947),o=r(8660),n=r(3159);function t(e){return(0,n.jsx)(u.e3,{className:(0,c.A)(d.G.wrapper.docsPages),children:(0,n.jsx)(o.A,{children:(0,a.v)(e.route.routes)})})}}}]);
