@@ -74,8 +74,8 @@ pnpm --filter @dove/ui run dev
 |--------|------|------|----------|
 | **playground** | Vite + React 测试应用 | ✅ 可用 | `pnpm run dev:play` |
 | **docs** | Docusaurus 文档站点 | ✅ 可用 | `pnpm run dev:docs` |
-| **frontend** | Next.js 前端应用（带 contentlayer） | ✅ Linux 可用 / ⚠️ Windows 需配置 | `pnpm run dev:front` |
-| **admin** | Next.js 管理后台 | ⚠️ 有组件错误 | `pnpm run dev:admin` |
+| **frontend** | Next.js 前端应用（带 contentlayer） | ✅ 全平台可用（自动适配） | `pnpm run dev:front` |
+| **admin** | Next.js 管理后台 | ✅ 可用 | `pnpm run dev:admin` |
 
 ---
 
@@ -113,32 +113,23 @@ pnpm --filter @dove/docs run serve
 
 ## ⚠️ 已知问题
 
-### Frontend 应用（contentlayer 在 Windows 上的兼容性）
+### Frontend 应用（contentlayer 自动适配）
 
 `@dove/frontend` 使用了 `contentlayer`，该库在 Windows 上有已知问题。
 
-**✅ contentlayer 已启用（适用于 Linux/Mac 生产环境）**
+**✅ 已自动适配操作系统**
 
-**Windows 开发者注意**：
-如果在 Windows 上遇到 contentlayer 相关错误，可以临时禁用它：
+配置文件 `apps/frontend/next.config.mjs` 会自动检测操作系统：
+- **Linux/Mac**：自动启用 contentlayer
+- **Windows**：自动跳过 contentlayer，避免错误
 
-1. 打开 `apps/frontend/next.config.mjs`
-2. 注释掉第 6-12 行（withContentlayer 配置）
-3. 取消注释第 15-21 行（Fallback config）
+**无需手动配置！** 项目会根据 `process.platform` 自动选择正确的配置。
 
-或者使用 **WSL（Windows Subsystem for Linux）** 运行项目
+### Admin 应用
 
-### Admin 应用（React 组件错误）
+`@dove/admin` 已修复 React Server Component 相关错误。
 
-`@dove/admin` 构建时有 React Server Component 相关错误：
-
-```
-Error: Event handlers cannot be passed to Client Component props.
-```
-
-**需要修复**：
-- 在相关组件顶部添加 `'use client'` 指令
-- 或将事件处理器移到客户端组件
+**✅ 已修复**：将主题切换按钮移到独立的客户端组件 `ThemeToggle.tsx`
 
 ---
 
@@ -232,7 +223,8 @@ pnpm install
 4. ✅ **@dove/tokens 缺少 build 脚本** - 已添加占位脚本
 5. ✅ **package.json exports 不完整** - 已添加完整的导出路径
 6. ✅ **Docusaurus CSS 导入路径错误** - 已临时禁用导入
-7. ✅ **Frontend contentlayer 配置** - 已恢复并添加 Windows fallback 配置
+7. ✅ **Frontend contentlayer 配置** - 已添加自动检测操作系统，无需手动配置
+8. ✅ **Admin React Server Component 错误** - 已将事件处理器移到客户端组件
 
 ---
 
