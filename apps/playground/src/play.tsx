@@ -1,3 +1,4 @@
+'use client'
 import React, { useState } from 'react'
 import { TriangleIcon, BrutButton, Card, Badge, Toggle, Tabs, KpiCard } from '@dove/ui'
 export default function App(){
